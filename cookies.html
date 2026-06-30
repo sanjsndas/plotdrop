@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Policy · Plot Drop</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background: #f5f2eb;
+            color: #1e2b2c;
+            line-height: 1.8;
+        }
+
+        .wrapper {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ----- header / nav (consistent) ----- */
+        header {
+            background: #1e3a3a;
+            padding: 18px 0;
+            border-bottom: 4px solid #b8a28c;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo i {
+            font-size: 2.4rem;
+            color: #e6d5b8;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .logo span {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #f1e7da;
+            letter-spacing: 1px;
+            background: #2b4f4a;
+            padding: 6px 18px 6px 14px;
+            border-radius: 40px 12px 12px 40px;
+            box-shadow: inset 0 -2px 0 #b8a28c;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 22px;
+            color: #ede7db;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid transparent;
+            font-size: 1.05rem;
+            letter-spacing: 0.3px;
+        }
+
+        nav ul li a:hover {
+            background: #b8a28c;
+            color: #1e2b2c;
+            border-color: #dccbbc;
+            transform: scale(1.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+        }
+
+        /* ----- page header ----- */
+        .page-header {
+            margin: 48px 0 20px;
+            padding: 20px 0 10px;
+            border-bottom: 3px dashed #b8a28c;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #1e3a3a;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header h1 i {
+            color: #2b5f55;
+            margin-right: 18px;
+        }
+
+        .page-header .subhead {
+            font-size: 1.2rem;
+            color: #3f5552;
+            margin-top: 6px;
+            padding-left: 68px;
+        }
+
+        /* cookies content */
+        .cookies-content {
+            margin: 30px 0 50px;
+        }
+
+        .cookies-card {
+            background: #fcf9f4;
+            padding: 34px 44px;
+            border-radius: 60px 12px 60px 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid #e3d7c8;
+            margin-bottom: 40px;
+            transition: 0.2s;
+        }
+
+        .cookies-card h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #1e3a3a;
+            border-bottom: 4px dotted #b8a28c;
+            padding-bottom: 14px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .cookies-card h2 i {
+            color: #2b5f55;
+            font-size: 1.9rem;
+            width: 2.2rem;
+        }
+
+        .cookies-card h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1e3a3a;
+            margin: 28px 0 14px;
+            border-left: 6px solid #b8a28c;
+            padding-left: 20px;
+        }
+
+        .cookies-card p {
+            margin-bottom: 22px;
+            font-size: 1.08rem;
+            color: #243b3a;
+        }
+
+        .cookies-card ul, .cookies-card ol {
+            margin: 18px 0 18px 32px;
+        }
+
+        .cookies-card li {
+            margin-bottom: 14px;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: #e6dccf;
+            padding: 18px 28px;
+            border-radius: 40px 8px 40px 8px;
+            margin: 24px 0;
+            border-left: 8px solid #2b5f55;
+        }
+
+        .stat-badge {
+            display: inline-block;
+            background: #1e3a3a;
+            color: #f1e7da;
+            padding: 4px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-right: 12px;
+        }
+
+        .flex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin: 28px 0;
+        }
+
+        .flex-grid > div {
+            flex: 1 1 220px;
+            background: #f1ede6;
+            padding: 18px 22px;
+            border-radius: 30px 8px 30px 8px;
+            border-left: 8px solid #b8a28c;
+        }
+
+        /* Cookie Consent Dialog Box */
+        .cookie-dialog {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 850px;
+            background: #1e3a3a;
+            color: #f1e7da;
+            padding: 28px 34px;
+            border-radius: 60px 16px 60px 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 2px solid #b8a28c;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            animation: slideUp 0.6s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+        }
+
+        .cookie-dialog.hidden {
+            display: none;
+        }
+
+        .cookie-dialog .cookie-text {
+            flex: 2 1 300px;
+        }
+
+        .cookie-dialog .cookie-text i {
+            font-size: 2rem;
+            color: #b8a28c;
+            margin-right: 14px;
+        }
+
+        .cookie-dialog .cookie-text p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-top: 4px;
+        }
+
+        .cookie-dialog .cookie-text a {
+            color: #e6d5b8;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        .cookie-dialog .cookie-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-dialog .cookie-btn {
+            padding: 12px 32px;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .cookie-dialog .cookie-btn.accept {
+            background: #b8a28c;
+            color: #1e2b2c;
+        }
+
+        .cookie-dialog .cookie-btn.accept:hover {
+            background: #d4c3ae;
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(184, 162, 140, 0.3);
+        }
+
+        .cookie-dialog .cookie-btn.decline {
+            background: transparent;
+            color: #d9d0c0;
+            border: 2px solid #b8a28c;
+        }
+
+        .cookie-dialog .cookie-btn.decline:hover {
+            background: rgba(184, 162, 140, 0.15);
+            transform: scale(1.04);
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateX(-50%) translateY(40px); }
+            100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        /* footer */
+        footer {
+            background: #1e2b2c;
+            color: #d9d0c0;
+            padding: 48px 0 28px;
+            margin-top: 40px;
+            border-top: 6px solid #b8a28c;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-address {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .footer-address i {
+            width: 28px;
+            color: #b8a28c;
+        }
+
+        .footer-phone {
+            font-size: 1.4rem;
+            font-weight: 500;
+            background: #2b4040;
+            padding: 6px 28px 6px 18px;
+            border-radius: 60px;
+            border: 1px solid #b8a28c;
+            display: inline-block;
+        }
+
+        .footer-phone i {
+            margin-right: 12px;
+            color: #b8a28c;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 24px;
+        }
+
+        .footer-nav a {
+            color: #d9d0c0;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.15s;
+            font-weight: 400;
+        }
+
+        .footer-nav a:hover {
+            border-bottom-color: #b8a28c;
+            color: #f1e7da;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #3f5552;
+            font-size: 0.95rem;
+            letter-spacing: 0.4px;
+        }
+
+        @media (max-width: 820px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+            nav ul {
+                justify-content: center;
+            }
+            .page-header h1 {
+                font-size: 2.4rem;
+            }
+            .page-header .subhead {
+                padding-left: 0;
+            }
+            .cookies-card {
+                padding: 28px 20px;
+            }
+            .footer-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cookie-dialog {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                padding: 24px 20px;
+                bottom: 20px;
+                border-radius: 40px 12px 40px 12px;
+            }
+            .cookie-dialog .cookie-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li a {
+                padding: 8px 14px;
+                font-size: 0.95rem;
+            }
+            .cookie-dialog .cookie-btn {
+                padding: 10px 24px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Plot Drop</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms</a></li>
+                    <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <div class="page-header">
+            <h1><i class="fas fa-cookie-bite"></i> Cookie Policy</h1>
+            <div class="subhead"><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Effective: June 27, 2026 · Last updated: June 2026</div>
+        </div>
+
+        <div class="cookies-content">
+
+            <!-- CARD 1: Introduction -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+                <p><span class="stat-badge">Your privacy matters</span> At Plot Drop Lawn Edging ("we," "us," "our"), we use cookies and similar tracking technologies to enhance your experience on our website, analyze user behavior, and deliver personalized content. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.</p>
+                <p>This policy is part of our broader commitment to transparency and privacy, as outlined in our <a href="privacy.html" style="color: #2b5f55; font-weight: 500;">Privacy Policy</a>. By using our website, you consent to our use of cookies as described in this policy.</p>
+                <div class="highlight-box">
+                    <i class="fas fa-cookie" style="color: #2b5f55; margin-right: 12px;"></i>
+                    <strong>What are cookies?</strong> Cookies are small text files stored on your device (computer, tablet, or phone) when you visit a website. They help websites remember your actions and preferences over time.
+                </div>
+            </div>
+
+            <!-- CARD 2: Types of Cookies We Use -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-tags"></i> 2. Types of Cookies We Use</h2>
+                <p>We use the following categories of cookies on our website:</p>
+
+                <h3>2.1. Essential (Strictly Necessary) Cookies</h3>
+                <p>These cookies are necessary for the basic functionality of our website. They enable core features such as:</p>
+                <ul>
+                    <li>Secure login and session management</li>
+                    <li>Remembering your cookie consent preferences</li>
+                    <li>Maintaining server load balancing and security</li>
+                    <li>Enabling basic navigation and page functionality</li>
+                </ul>
+                <p>Without these cookies, our website would not function properly. They do not collect any personal data and are exempt from consent requirements.</p>
+
+                <h3>2.2. Performance and Analytics Cookies</h3>
+                <p>These cookies help us understand how users interact with our website. We use them to:</p>
+                <ul>
+                    <li>Track page visits, time spent on pages, and user journeys</li>
+                    <li>Identify which pages are most popular and which need improvement</li>
+                    <li>Monitor website performance and resolve technical issues</li>
+                    <li>Aggregate anonymous data for statistical analysis</li>
+                </ul>
+                <p>We primarily use Google Analytics for this purpose. The data collected is anonymous and cannot identify you personally.</p>
+
+                <h3>2.3. Functional Cookies</h3>
+                <p>Functional cookies allow our website to remember your choices and provide enhanced, personalized features. These include:</p>
+                <ul>
+                    <li>Remembering your language and region preferences</li>
+                    <li>Storing your form data (e.g., consultation request details) for convenience</li>
+                    <li>Maintaining your preferences for displaying content (e.g., dark mode)</li>
+                    <li>Remembering items in your quote or project basket</li>
+                </ul>
+                <p>These cookies improve your user experience by making the site feel more intuitive and responsive.</p>
+
+                <h3>2.4. Targeting and Advertising Cookies</h3>
+                <p>With your consent, we use these cookies to deliver relevant advertisements and promotional content. They may also be used by third-party advertisers to:</p>
+                <ul>
+                    <li>Show you personalized ads based on your browsing history</li>
+                    <li>Limit the number of times you see an ad</li>
+                    <li>Measure the effectiveness of our advertising campaigns</li>
+                    <li>Retarget you with ads on other platforms (e.g., social media)</li>
+                </ul>
+                <p>We only use these cookies with your explicit consent, and you can withdraw your consent at any time.</p>
+
+                <div class="flex-grid">
+                    <div><i class="fas fa-shield-alt" style="color: #2b5f55;"></i> <strong>Essential</strong> – required for site operation</div>
+                    <div><i class="fas fa-chart-bar" style="color: #2b5f55;"></i> <strong>Analytics</strong> – usage & performance</div>
+                    <div><i class="fas fa-cog" style="color: #2b5f55;"></i> <strong>Functional</strong> – preferences & personalization</div>
+                    <div><i class="fas fa-ad" style="color: #2b5f55;"></i> <strong>Targeting</strong> – personalized ads</div>
+                </div>
+            </div>
+
+            <!-- CARD 3: Third-Party Cookies -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-share-alt"></i> 3. Third-Party Cookies</h2>
+                <p>Our website may embed content or use services from third-party providers, which may set their own cookies. These include:</p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Used for web analytics and performance tracking. Google's privacy policy applies to their cookies.</li>
+                    <li><strong>YouTube:</strong> If we embed videos from YouTube, they may set cookies to remember your preferences and track video views.</li>
+                    <li><strong>Google Maps:</strong> When displaying location information or interactive maps, Google may set cookies for functionality and analytics.</li>
+                    <li><strong>Social media platforms:</strong> If you use social sharing buttons (e.g., Facebook, Twitter, Instagram), these platforms may set cookies to enable sharing and track engagement.</li>
+                    <li><strong>Payment processors:</strong> If you make a payment through our site, our payment partners (e.g., Stripe, PayPal) may set cookies for security and transaction management.</li>
+                </ul>
+                <p>We do not control third-party cookies and are not responsible for their data practices. We recommend reviewing the privacy and cookie policies of these third-party providers.</p>
+            </div>
+
+            <!-- CARD 4: How Long Do Cookies Last? -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-clock"></i> 4. How Long Do Cookies Last?</h2>
+                <p>Cookies can be either:</p>
+                <ul>
+                    <li><strong>Session cookies:</strong> These are temporary and expire when you close your browser. They are used to maintain your session during a single visit.</li>
+                    <li><strong>Persistent cookies:</strong> These remain on your device for a set period (days, months, or years) or until you manually delete them. They are used to remember your preferences across visits.</li>
+                </ul>
+                <p>The lifespan of our cookies varies depending on their purpose:</p>
+                <ul>
+                    <li>Essential cookies: session-based (expire when you close your browser)</li>
+                    <li>Analytics cookies: up to 26 months (Google Analytics) or as configured</li>
+                    <li>Functional cookies: up to 12 months</li>
+                    <li>Targeting cookies: up to 30 days to 2 years, depending on the provider</li>
+                </ul>
+                <p>You can view and manage cookie lifespans through your browser settings.</p>
+            </div>
+
+            <!-- CARD 5: Why We Use Cookies -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-question-circle"></i> 5. Why We Use Cookies</h2>
+                <p>We use cookies for the following purposes:</p>
+                <ul>
+                    <li><strong>To provide core functionality:</strong> Enable secure login, maintain session state, and ensure website stability.</li>
+                    <li><strong>To improve user experience:</strong> Remember your preferences, save form data, and provide personalized content.</li>
+                    <li><strong>To analyze and optimize:</strong> Understand user behavior, identify trends, and make data-driven improvements to our website and services.</li>
+                    <li><strong>To market effectively:</strong> Deliver relevant advertisements, track campaign performance, and retarget interested users.</li>
+                    <li><strong>To support security:</strong> Detect fraudulent activity, prevent malicious attacks, and protect user data.</li>
+                </ul>
+                <p>Our use of cookies is balanced with your privacy rights. We only set non-essential cookies with your explicit consent, and you have full control over your cookie preferences.</p>
+            </div>
+
+            <!-- CARD 6: Your Cookie Choices -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-sliders-h"></i> 6. Your Cookie Choices</h2>
+                <p>You have the right to decide whether to accept or decline cookies. Here's how you can manage your preferences:</p>
+
+                <h3>6.1. Cookie Consent Dialog</h3>
+                <p>When you first visit our website, you will see a cookie consent banner at the bottom of the page. You can:</p>
+                <ul>
+                    <li><strong>Accept all cookies:</strong> We will set all categories of cookies for an optimal experience.</li>
+                    <li><strong>Decline non-essential cookies:</strong> We will only set essential cookies. Performance, functional, and targeting cookies will be blocked.</li>
+                </ul>
+                <p>You can change your preferences at any time by clicking the "Cookie Settings" link in the footer (if applicable) or by clearing your browser cookies and refreshing the page.</p>
+
+                <h3>6.2. Browser Settings</h3>
+                <p>Most web browsers allow you to manage cookie settings through their preferences menu. You can:</p>
+                <ul>
+                    <li>View and delete individual cookies</li>
+                    <li>Block all cookies or only third-party cookies</li>
+                    <li>Clear all cookies when you close your browser</li>
+                    <li>Set up exceptions for specific websites</li>
+                </ul>
+                <p>Here are links to manage cookies in popular browsers:</p>
+                <ul>
+                    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" style="color: #2b5f55;">Google Chrome</a></li>
+                    <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" style="color: #2b5f55;">Mozilla Firefox</a></li>
+                    <li><a href="https://support.apple.com/en-us/HT201265" target="_blank" style="color: #2b5f55;">Safari</a></li>
+                    <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" style="color: #2b5f55;">Microsoft Edge</a></li>
+                    <li><a href="https://help.opera.com/en/latest/web-preferences/#cookies" target="_blank" style="color: #2b5f55;">Opera</a></li>
+                </ul>
+
+                <h3>6.3. Opt-Out of Analytics</h3>
+                <p>You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="color: #2b5f55;">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+                <h3>6.4. Opt-Out of Targeted Ads</h3>
+                <p>You can opt out of interest-based advertising through the <a href="https://optout.networkadvertising.org/" target="_blank" style="color: #2b5f55;">Network Advertising Initiative</a> or the <a href="https://optout.aboutads.info/" target="_blank" style="color: #2b5f55;">Digital Advertising Alliance</a>.</p>
+
+                <div class="highlight-box">
+                    <i class="fas fa-info-circle" style="color: #2b5f55; margin-right: 12px;"></i>
+                    <strong>Note:</strong> If you block or delete certain cookies, some parts of our website may not function correctly, and your user experience may be affected.
+                </div>
+            </div>
+
+            <!-- CARD 7: List of Cookies We Use -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-list-ul"></i> 7. Detailed List of Cookies We Use</h2>
+                <p>Below is a list of specific cookies we may set on our website:</p>
+
+                <h3>Essential Cookies</h3>
+                <ul>
+                    <li><strong>cookie_consent:</strong> Remembers your cookie acceptance preference. Expires after 1 year.</li>
+                    <li><strong>PHPSESSID:</strong> Used for session management and security. Expires when you close your browser.</li>
+                    <li><strong>csrf_token:</strong> Provides protection against cross-site request forgery. Expires after 24 hours.</li>
+                </ul>
+
+                <h3>Analytics Cookies</h3>
+                <ul>
+                    <li><strong>_ga:</strong> Google Analytics cookie used to distinguish users. Expires after 2 years.</li>
+                    <li><strong>_gid:</strong> Google Analytics cookie used to distinguish users. Expires after 24 hours.</li>
+                    <li><strong>_gat:</strong> Google Analytics cookie used to limit request rates. Expires after 1 minute.</li>
+                </ul>
+
+                <h3>Functional Cookies</h3>
+                <ul>
+                    <li><strong>lang_pref:</strong> Remembers your preferred language. Expires after 6 months.</li>
+                    <li><strong>theme_pref:</strong> Remembers your display preferences (e.g., light/dark mode). Expires after 12 months.</li>
+                    <li><strong>form_data:</strong> Stores partially completed form data for your convenience. Expires after 30 days.</li>
+                </ul>
+
+                <h3>Targeting Cookies</h3>
+                <ul>
+                    <li><strong>_fbp:</strong> Facebook Pixel cookie used for advertising. Expires after 3 months.</li>
+                    <li><strong>_gcl_au:</strong> Google Ads cookie used for conversion tracking. Expires after 3 months.</li>
+                    <li><strong>IDE:</strong> DoubleClick cookie used for ad targeting. Expires after 2 years.</li>
+                </ul>
+                <p>Note: This list is subject to change as we update our services and technologies. Please check back regularly for the most current information.</p>
+            </div>
+
+            <!-- CARD 8: Updates to This Policy -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-edit"></i> 8. Updates to This Cookie Policy</h2>
+                <p>We may update this Cookie Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will post the revised policy on this page with a new "Effective Date."</p>
+                <p>If we make material changes, we will notify you via email (if we have your email address) or through a prominent notice on our website. We encourage you to review this policy periodically.</p>
+                <p>Your continued use of our website after any changes constitutes your acceptance of the updated policy.</p>
+            </div>
+
+            <!-- CARD 9: Contact Us -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-address-card"></i> 9. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Cookie Policy or our data practices, please reach out to us:</p>
+                <p><i class="fas fa-envelope" style="color: #2b5f55; width: 28px;"></i> <strong>Email:</strong> cookies@plotdrop.com</p>
+                <p><i class="fas fa-phone-alt" style="color: #2b5f55; width: 28px;"></i> <strong>Phone:</strong> (555) 289-7700</p>
+                <p><i class="fas fa-map-pin" style="color: #2b5f55; width: 28px;"></i> <strong>Mail:</strong> 1428 Evergreen Lane, Suite B, Portland, OR 97214</p>
+                <p>We are committed to addressing your concerns and ensuring you have full control over your cookie preferences.</p>
+            </div>
+
+            <!-- Additional content to reach 2100+ words -->
+            <div class="cookies-card">
+                <h2><i class="fas fa-plus-circle"></i> 10. Additional Cookie Information</h2>
+                <h3>10.1. Cookie Security</h3>
+                <p>We prioritize the security of your data. All cookies we set are transmitted over secure HTTPS connections to prevent interception. We do not store sensitive personal information in cookies. Any personal data collected through cookies is handled in accordance with our Privacy Policy.</p>
+                <h3>10.2. First-Party vs. Third-Party Cookies</h3>
+                <p>First-party cookies are set directly by Plot Drop and are used for site functionality, analytics, and preferences. Third-party cookies are set by external services we integrate with (e.g., Google, Facebook). We have limited control over third-party cookies, and their use is governed by the respective provider's policies.</p>
+                <h3>10.3. Do Not Track (DNT) Signals</h3>
+                <p>Some browsers offer a "Do Not Track" feature that sends a signal to websites indicating that you do not want to be tracked. Our website currently does not respond to DNT signals due to the lack of a consistent industry standard. However, we respect your cookie preferences through our consent dialog.</p>
+                <h3>10.4. Cookie Management for Mobile Devices</h3>
+                <p>Mobile devices also allow you to manage cookies. On iOS, you can go to Settings > Safari > Privacy & Security to manage cookies. On Android, you can manage cookies in your browser's settings menu. For third-party app cookies, you may need to adjust settings within the app itself.</p>
+                <h3>10.5. Cookie Consent Evidence</h3>
+                <p>When you provide consent through our cookie dialog, we record your consent preference, the date and time of consent, and the version of our Cookie Policy at that time. This record helps us demonstrate compliance with data protection regulations.</p>
+                <h3>10.6. Opt-Out Mechanisms</h3>
+                <p>In addition to our consent dialog, you can use the following opt-out mechanisms:</p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="color: #2b5f55;">Google Analytics Opt-out Add-on</a></li>
+                    <li><strong>Network Advertising Initiative:</strong> Visit the <a href="https://optout.networkadvertising.org/" target="_blank" style="color: #2b5f55;">NAI Opt-Out Page</a></li>
+                    <li><strong>Digital Advertising Alliance:</strong> Visit the <a href="https://optout.aboutads.info/" target="_blank" style="color: #2b5f55;">DAA Opt-Out Page</a></li>
+                </ul>
+                <h3>10.7. Cookie Law Compliance</h3>
+                <p>Our Cookie Policy complies with major data protection regulations, including:</p>
+                <ul>
+                    <li><strong>GDPR (EU/UK):</strong> We obtain explicit consent before setting non-essential cookies.</li>
+                    <li><strong>CCPA (California):</strong> We provide transparency about our cookie use and honor opt-out requests.</li>
+                    <li><strong>ePrivacy Directive (EU):</strong> We provide clear information and obtain consent for non-essential cookies.</li>
+                    <li><strong>PIPEDA (Canada):</strong> We obtain meaningful consent for the collection and use of personal information through cookies.</li>
+                </ul>
+                <h3>10.8. Cookie Audit and Review</h3>
+                <p>We conduct regular audits of our cookie usage to ensure we are using only necessary cookies and to update our cookie list as our technology evolves. Our latest audit was completed in June 2026, and we found all cookies to be properly categorized and documented.</p>
+                <p>We are committed to maintaining your trust by being transparent about our data practices. If you have any suggestions or concerns about our cookie usage, please don't hesitate to contact us.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Cookie Consent Dialog Box -->
+    <div id="cookieDialog" class="cookie-dialog">
+        <div class="cookie-text">
+            <i class="fas fa-cookie-bite"></i>
+            <p><strong>We value your privacy.</strong> We use cookies to enhance your browsing experience, analyze site traffic, and serve personalized content. By clicking <strong>"Accept All"</strong>, you consent to our use of all cookies. You can also choose to decline non-essential cookies. For more details, please see our <a href="cookies.html">Cookie Policy</a>.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn decline" onclick="declineCookies()"><i class="fas fa-times"></i> Decline</button>
+            <button class="cookie-btn accept" onclick="acceptCookies()"><i class="fas fa-check"></i> Accept All</button>
+        </div>
+    </div>
+
+    <!-- footer with address & phone -->
+    <footer>
+        <div class="wrapper footer-grid">
+            <div class="footer-address">
+                <i class="fas fa-map-pin"></i> 1428 Evergreen Lane, Suite B<br />
+                <span style="margin-left: 28px;">Portland, OR 97214</span><br />
+                <i class="fas fa-envelope" style="margin-top: 6px;"></i> hello@plotdrop.com
+            </div>
+            <div class="footer-phone">
+                <i class="fas fa-phone-alt"></i> (555) 289-7700
+            </div>
+            <div class="footer-nav">
+                <a href="home.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="cookies.html">Cookies</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="wrapper copyright">
+            &copy; 2026 Plot Drop Lawn Edging · cookie policy
+        </div>
+    </footer>
+
+    <script>
+        // Cookie consent functions with localStorage
+        function acceptCookies() {
+            document.getElementById('cookieDialog').classList.add('hidden');
+            localStorage.setItem('cookieConsent', 'accepted');
+            // Here you would set all non-essential cookies
+            console.log('Cookies accepted - all cookies enabled');
+        }
+
+        function declineCookies() {
+            document.getElementById('cookieDialog').classList.add('hidden');
+            localStorage.setItem('cookieConsent', 'declined');
+            // Here you would block non-essential cookies
+            console.log('Cookies declined - only essential cookies enabled');
+        }
+
+        // Check if user has already made a choice
+        document.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent === 'accepted' || consent === 'declined') {
+                document.getElementById('cookieDialog').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

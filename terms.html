@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service · Plot Drop</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background: #f5f2eb;
+            color: #1e2b2c;
+            line-height: 1.8;
+        }
+
+        .wrapper {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ----- header / nav (consistent) ----- */
+        header {
+            background: #1e3a3a;
+            padding: 18px 0;
+            border-bottom: 4px solid #b8a28c;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo i {
+            font-size: 2.4rem;
+            color: #e6d5b8;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .logo span {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #f1e7da;
+            letter-spacing: 1px;
+            background: #2b4f4a;
+            padding: 6px 18px 6px 14px;
+            border-radius: 40px 12px 12px 40px;
+            box-shadow: inset 0 -2px 0 #b8a28c;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 22px;
+            color: #ede7db;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid transparent;
+            font-size: 1.05rem;
+            letter-spacing: 0.3px;
+        }
+
+        nav ul li a:hover {
+            background: #b8a28c;
+            color: #1e2b2c;
+            border-color: #dccbbc;
+            transform: scale(1.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+        }
+
+        /* ----- page header ----- */
+        .page-header {
+            margin: 48px 0 20px;
+            padding: 20px 0 10px;
+            border-bottom: 3px dashed #b8a28c;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #1e3a3a;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header h1 i {
+            color: #2b5f55;
+            margin-right: 18px;
+        }
+
+        .page-header .subhead {
+            font-size: 1.2rem;
+            color: #3f5552;
+            margin-top: 6px;
+            padding-left: 68px;
+        }
+
+        /* terms content */
+        .terms-content {
+            margin: 30px 0 50px;
+        }
+
+        .terms-card {
+            background: #fcf9f4;
+            padding: 34px 44px;
+            border-radius: 60px 12px 60px 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid #e3d7c8;
+            margin-bottom: 40px;
+            transition: 0.2s;
+        }
+
+        .terms-card h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #1e3a3a;
+            border-bottom: 4px dotted #b8a28c;
+            padding-bottom: 14px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .terms-card h2 i {
+            color: #2b5f55;
+            font-size: 1.9rem;
+            width: 2.2rem;
+        }
+
+        .terms-card h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1e3a3a;
+            margin: 28px 0 14px;
+            border-left: 6px solid #b8a28c;
+            padding-left: 20px;
+        }
+
+        .terms-card p {
+            margin-bottom: 22px;
+            font-size: 1.08rem;
+            color: #243b3a;
+        }
+
+        .terms-card ul, .terms-card ol {
+            margin: 18px 0 18px 32px;
+        }
+
+        .terms-card li {
+            margin-bottom: 14px;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: #e6dccf;
+            padding: 18px 28px;
+            border-radius: 40px 8px 40px 8px;
+            margin: 24px 0;
+            border-left: 8px solid #2b5f55;
+        }
+
+        .stat-badge {
+            display: inline-block;
+            background: #1e3a3a;
+            color: #f1e7da;
+            padding: 4px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-right: 12px;
+        }
+
+        .flex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin: 28px 0;
+        }
+
+        .flex-grid > div {
+            flex: 1 1 220px;
+            background: #f1ede6;
+            padding: 18px 22px;
+            border-radius: 30px 8px 30px 8px;
+            border-left: 8px solid #b8a28c;
+        }
+
+        /* footer */
+        footer {
+            background: #1e2b2c;
+            color: #d9d0c0;
+            padding: 48px 0 28px;
+            margin-top: 40px;
+            border-top: 6px solid #b8a28c;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-address {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .footer-address i {
+            width: 28px;
+            color: #b8a28c;
+        }
+
+        .footer-phone {
+            font-size: 1.4rem;
+            font-weight: 500;
+            background: #2b4040;
+            padding: 6px 28px 6px 18px;
+            border-radius: 60px;
+            border: 1px solid #b8a28c;
+            display: inline-block;
+        }
+
+        .footer-phone i {
+            margin-right: 12px;
+            color: #b8a28c;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 24px;
+        }
+
+        .footer-nav a {
+            color: #d9d0c0;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.15s;
+            font-weight: 400;
+        }
+
+        .footer-nav a:hover {
+            border-bottom-color: #b8a28c;
+            color: #f1e7da;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #3f5552;
+            font-size: 0.95rem;
+            letter-spacing: 0.4px;
+        }
+
+        @media (max-width: 820px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+            nav ul {
+                justify-content: center;
+            }
+            .page-header h1 {
+                font-size: 2.4rem;
+            }
+            .page-header .subhead {
+                padding-left: 0;
+            }
+            .terms-card {
+                padding: 28px 20px;
+            }
+            .footer-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li a {
+                padding: 8px 14px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Plot Drop</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms</a></li>
+                    <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <div class="page-header">
+            <h1><i class="fas fa-file-contract"></i> Terms of Service</h1>
+            <div class="subhead"><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Effective: June 27, 2026 · Last updated: June 2026</div>
+        </div>
+
+        <div class="terms-content">
+
+            <!-- CARD 1: Introduction -->
+            <div class="terms-card">
+                <h2><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+                <p><span class="stat-badge">Welcome to Plot Drop</span> These Terms of Service ("Terms") govern your use of our website, services, and any related communications. By accessing our website, requesting a quote, or engaging our lawn edging services, you agree to be bound by these Terms. Please read them carefully.</p>
+                <p>Plot Drop Lawn Edging ("we," "us," "our") provides professional landscaping and edging services. These Terms apply to all users, clients, and visitors. If you do not agree with any part of these Terms, you must not use our website or services.</p>
+                <div class="highlight-box">
+                    <i class="fas fa-gavel" style="color: #2b5f55; margin-right: 12px;"></i>
+                    <strong>Agreement:</strong> These Terms form a legally binding contract between you and Plot Drop. By using our services, you acknowledge that you have read, understood, and accepted these Terms.
+                </div>
+            </div>
+
+            <!-- CARD 2: Services -->
+            <div class="terms-card">
+                <h2><i class="fas fa-tools"></i> 2. Services Offered</h2>
+                <p>Plot Drop provides professional lawn edging services, including but not limited to:</p>
+                <ul>
+                    <li><strong>Installation:</strong> Steel, stone, wood, brick, concrete, and composite edging for residential and commercial properties.</li>
+                    <li><strong>Design consultation:</strong> Custom design planning, 3D visualization, and material selection guidance.</li>
+                    <li><strong>Maintenance:</strong> Edging repair, redefinition, sealing, and seasonal touch-ups.</li>
+                    <li><strong>Additional features:</strong> Integrated lighting, drip irrigation, and drainage solutions.</li>
+                </ul>
+                <p>All services are subject to availability, site conditions, and client requirements. We reserve the right to refuse service if we determine that the project is unsafe, impractical, or beyond our expertise.</p>
+                <p>Service descriptions, pricing, and timelines are provided during the consultation phase. Any changes to the scope of work must be agreed upon in writing.</p>
+            </div>
+
+            <!-- CARD 3: Estimates and Quotes -->
+            <div class="terms-card">
+                <h2><i class="fas fa-calculator"></i> 3. Estimates and Quotes</h2>
+                <p>We provide free, no-obligation estimates for all projects. Our quotes are based on:</p>
+                <ul>
+                    <li>Site measurements and assessment</li>
+                    <li>Material selection and quantities</li>
+                    <li>Labor requirements and project complexity</li>
+                    <li>Accessibility and site conditions</li>
+                    <li>Any additional features or customizations</li>
+                </ul>
+                <p>Quotes are valid for 30 days from the date of issue. After 30 days, prices may change due to material costs or market fluctuations. We reserve the right to adjust a quote if the scope of work changes or if unforeseen site conditions arise.</p>
+                <p>All estimates are provided in good faith, but they are not final until a written agreement is signed by both parties. Any verbal estimates are for informational purposes only and are not binding.</p>
+            </div>
+
+            <!-- CARD 4: Payment Terms -->
+            <div class="terms-card">
+                <h2><i class="fas fa-credit-card"></i> 4. Payment Terms</h2>
+                <p>Payment terms are as follows:</p>
+                <ul>
+                    <li><strong>Deposit:</strong> A 30% deposit is required to secure your project start date. This deposit confirms your acceptance of the quote and reserves our team's time.</li>
+                    <li><strong>Progress payments:</strong> For larger projects (over $5,000), we may require progress payments at defined milestones (e.g., after material delivery, after site preparation).</li>
+                    <li><strong>Final payment:</strong> The remaining balance is due upon completion of the project and your final inspection and approval.</li>
+                    <li><strong>Accepted payment methods:</strong> We accept credit/debit cards (Visa, MasterCard, American Express), bank transfers, and checks.</li>
+                    <li><strong>Late payments:</strong> Invoices not paid within 15 days of the due date may incur a late fee of 1.5% per month or the maximum allowed by law.</li>
+                </ul>
+                <p>All payments are non-refundable except as provided in our cancellation policy or if we fail to deliver the agreed-upon services.</p>
+                <div class="highlight-box">
+                    <i class="fas fa-exclamation-triangle" style="color: #2b5f55; margin-right: 12px;"></i>
+                    <strong>Important:</strong> We reserve the right to place a lien on your property for unpaid services, as permitted by law.
+                </div>
+            </div>
+
+            <!-- CARD 5: Project Timeline and Scheduling -->
+            <div class="terms-card">
+                <h2><i class="fas fa-clock"></i> 5. Project Timeline and Scheduling</h2>
+                <p>We strive to complete all projects within the estimated timeframe. However, the following factors may affect the schedule:</p>
+                <ul>
+                    <li><strong>Weather conditions:</strong> Rain, extreme heat, or freezing temperatures may delay outdoor work. We prioritize safety and quality over speed.</li>
+                    <li><strong>Material availability:</strong> Delays in material delivery from suppliers may impact the schedule.</li>
+                    <li><strong>Site accessibility:</strong> Difficult terrain, limited access, or existing infrastructure may require additional time.</li>
+                    <li><strong>Change orders:</strong> Any changes to the scope of work will adjust the timeline accordingly.</li>
+                </ul>
+                <p>We will communicate any delays promptly and work with you to minimize inconvenience. We are not liable for damages or penalties resulting from delays beyond our reasonable control (force majeure).</p>
+                <p>We typically work Monday through Friday, 8:00 AM to 5:00 PM. Weekend work may be available upon request and may incur additional charges.</p>
+            </div>
+
+            <!-- CARD 6: Client Responsibilities -->
+            <div class="terms-card">
+                <h2><i class="fas fa-user-check"></i> 6. Client Responsibilities</h2>
+                <p>To ensure a safe and successful project, you agree to:</p>
+                <ul>
+                    <li>Provide accurate information about your property, including property lines, utility locations, and any existing structures.</li>
+                    <li>Inform us of any underground utilities, irrigation systems, or other hidden features that could be affected by our work.</li>
+                    <li>Ensure clear access to the work area, including moving vehicles, furniture, or other obstacles.</li>
+                    <li>Remove pets from the work area for safety reasons.</li>
+                    <li>Obtain any necessary permits or approvals from your homeowners' association or local authorities, unless we agree to handle this on your behalf (additional fees may apply).</li>
+                    <li>Secure your property and valuables; we are not responsible for theft or damage that occurs outside of our work area.</li>
+                    <li>Provide access to water and electricity if needed for our equipment.</li>
+                </ul>
+                <p>Failure to fulfill these responsibilities may result in delays, additional charges, or termination of the project.</p>
+            </div>
+
+            <!-- CARD 7: Warranties and Guarantees -->
+            <div class="terms-card">
+                <h2><i class="fas fa-award"></i> 7. Warranties and Guarantees</h2>
+                <p>Plot Drop stands behind the quality of our work. We offer the following warranties:</p>
+                <ul>
+                    <li><strong>Workmanship warranty:</strong> We guarantee our installation work for 12 months from the date of completion. If any defects arise due to improper installation, we will repair or replace them at no cost to you.</li>
+                    <li><strong>Material warranties:</strong> Materials are covered by the manufacturer's warranty. We will assist you in filing claims if defects in materials occur.</li>
+                    <li><strong>Satisfaction guarantee:</strong> If you are not fully satisfied with our work, we will work with you to address your concerns. If we are unable to resolve the issue, we may offer a partial refund or credit.</li>
+                </ul>
+                <p>Warranties do not cover damage caused by:</p>
+                <ul>
+                    <li>Neglect, misuse, or improper maintenance by the client</li>
+                    <li>Acts of nature (flood, earthquake, severe storms, etc.)</li>
+                    <li>Accidental damage from landscaping equipment or other activities</li>
+                    <li>Normal wear and tear over time (e.g., fading, minor settling)</li>
+                </ul>
+                <p>To make a warranty claim, please contact us within the warranty period with photos and a description of the issue. We will schedule an inspection and determine the appropriate remedy.</p>
+            </div>
+
+            <!-- CARD 8: Cancellations and Refunds -->
+            <div class="terms-card">
+                <h2><i class="fas fa-ban"></i> 8. Cancellations and Refunds</h2>
+                <p>You may cancel your project under the following conditions:</p>
+                <ul>
+                    <li><strong>Before work begins:</strong> If you cancel before we start work, we will refund your deposit, minus any costs incurred for materials ordered specifically for your project (these materials will be delivered to you).</li>
+                    <li><strong>After work begins:</strong> If you cancel after work has commenced, you will be charged for work completed and materials used. Any refund will be prorated accordingly.</li>
+                    <li><strong>Change of mind:</strong> If you decide to change your project scope or materials after signing the agreement, we will provide a revised quote. Additional costs will be your responsibility.</li>
+                    <li><strong>Our right to cancel:</strong> We reserve the right to cancel a project if we encounter safety concerns, unexpected site conditions, or if the client fails to meet their responsibilities. In such cases, you will be billed for work completed.</li>
+                </ul>
+                <p>Refunds will be processed within 30 days of cancellation. We do not provide refunds for services already rendered or materials already installed.</p>
+            </div>
+
+            <!-- CARD 9: Liability and Insurance -->
+            <div class="terms-card">
+                <h2><i class="fas fa-shield-alt"></i> 9. Liability and Insurance</h2>
+                <p>Plot Drop is fully licensed, bonded, and insured. We carry:</p>
+                <ul>
+                    <li><strong>General liability insurance:</strong> Coverage for property damage and bodily injury during our work.</li>
+                    <li><strong>Workers' compensation:</strong> Coverage for our employees in case of workplace injury.</li>
+                    <li><strong>Professional liability insurance:</strong> Coverage for errors or omissions in our design or advisory services.</li>
+                </ul>
+                <p>Our liability is limited to the total amount paid for the specific project. We are not liable for:</p>
+                <ul>
+                    <li>Consequential damages (e.g., loss of use, lost profits, or other indirect losses)</li>
+                    <li>Damage to property not directly related to our work (e.g., pre-existing conditions, damage caused by third parties)</li>
+                    <li>Damage resulting from failure to follow our maintenance recommendations</li>
+                </ul>
+                <p>You agree to hold Plot Drop harmless from any claims, liabilities, or expenses arising from your use of our services, except where we are found to be grossly negligent.</p>
+            </div>
+
+            <!-- CARD 10: Intellectual Property -->
+            <div class="terms-card">
+                <h2><i class="fas fa-copyright"></i> 10. Intellectual Property</h2>
+                <p>All content on our website, including text, images, logos, designs, and graphics, is the intellectual property of Plot Drop or our licensors. You may not:</p>
+                <ul>
+                    <li>Copy, reproduce, or distribute any content without our written permission</li>
+                    <li>Use our trademarks or logos without authorization</li>
+                    <li>Modify or create derivative works from our content</li>
+                </ul>
+                <p>You may share our content for personal, non-commercial purposes, provided you give proper attribution to Plot Drop and do not alter the content.</p>
+                <p>Any design concepts, proposals, or plans we create for your project remain our intellectual property until we are paid in full. After full payment, you may use the designs for your project only.</p>
+            </div>
+
+            <!-- CARD 11: Privacy and Data Protection -->
+            <div class="terms-card">
+                <h2><i class="fas fa-user-secret"></i> 11. Privacy and Data Protection</h2>
+                <p>Your privacy is important to us. Our collection and use of your personal information are governed by our <a href="privacy.html" style="color: #2b5f55; font-weight: 500;">Privacy Policy</a>. By using our services, you consent to our data practices as described in that policy.</p>
+                <p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, we cannot guarantee the security of data transmitted over the internet.</p>
+            </div>
+
+            <!-- CARD 12: User Conduct -->
+            <div class="terms-card">
+                <h2><i class="fas fa-users"></i> 12. User Conduct</h2>
+                <p>When using our website or interacting with our team, you agree to:</p>
+                <ul>
+                    <li>Provide truthful and accurate information</li>
+                    <li>Not use our services for any unlawful or fraudulent purpose</li>
+                    <li>Not interfere with our website's functionality or security</li>
+                    <li>Not harass, abuse, or threaten our employees or other users</li>
+                    <li>Not post or transmit harmful content, including viruses or malware</li>
+                </ul>
+                <p>We reserve the right to terminate your access to our website or services if you violate these conduct guidelines.</p>
+            </div>
+
+            <!-- CARD 13: Dispute Resolution -->
+            <div class="terms-card">
+                <h2><i class="fas fa-gavel"></i> 13. Dispute Resolution</h2>
+                <p>In the event of a dispute arising from these Terms or our services, we encourage you to contact us directly to seek a resolution. If we cannot resolve the dispute informally, the following process applies:</p>
+                <ul>
+                    <li><strong>Mediation:</strong> Both parties agree to attempt mediation with a neutral third party before proceeding to arbitration or litigation. Mediation costs will be shared equally.</li>
+                    <li><strong>Arbitration:</strong> If mediation fails, disputes will be resolved through binding arbitration administered by the American Arbitration Association (AAA) in accordance with its Commercial Arbitration Rules. The arbitration will take place in Portland, Oregon.</li>
+                    <li><strong>Small Claims:</strong> Either party may bring a claim in small claims court for disputes under $10,000, instead of arbitration.</li>
+                </ul>
+                <p>Each party bears their own legal fees, unless the arbitrator or court awards fees to the prevailing party. You waive the right to bring a class action against us.</p>
+                <div class="highlight-box">
+                    <i class="fas fa-balance-scale" style="color: #2b5f55; margin-right: 12px;"></i>
+                    <strong>Governing law:</strong> These Terms are governed by the laws of the State of Oregon, without regard to conflict of law principles.
+                </div>
+            </div>
+
+            <!-- CARD 14: Modifications to Terms -->
+            <div class="terms-card">
+                <h2><i class="fas fa-edit"></i> 14. Modifications to Terms</h2>
+                <p>We reserve the right to update or modify these Terms at any time. Changes will be effective immediately upon posting on this page, with a new "Effective Date." We will notify you of significant changes via email or through a prominent notice on our website.</p>
+                <p>Your continued use of our website or services after any changes constitutes your acceptance of the new Terms. If you do not agree with the changes, you should discontinue using our services.</p>
+            </div>
+
+            <!-- CARD 15: Termination -->
+            <div class="terms-card">
+                <h2><i class="fas fa-stop-circle"></i> 15. Termination</h2>
+                <p>We may terminate or suspend your access to our services immediately, without prior notice, if you breach these Terms. Upon termination, you must cease using our website and services.</p>
+                <p>Termination does not relieve you of any payment obligations for work already performed.</p>
+            </div>
+
+            <!-- CARD 16: Entire Agreement -->
+            <div class="terms-card">
+                <h2><i class="fas fa-file-signature"></i> 16. Entire Agreement</h2>
+                <p>These Terms, together with our Privacy Policy and any written agreements signed by both parties, constitute the entire agreement between you and Plot Drop. They supersede all prior or contemporaneous communications, representations, or agreements, whether written or oral.</p>
+                <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue to be in full force and effect.</p>
+            </div>
+
+            <!-- CARD 17: Severability -->
+            <div class="terms-card">
+                <h2><i class="fas fa-puzzle-piece"></i> 17. Severability</h2>
+                <p>If any provision of these Terms is determined to be invalid, illegal, or unenforceable, the remaining provisions shall remain in full force and effect, and the invalid provision shall be construed to achieve its intended purpose as closely as possible.</p>
+            </div>
+
+            <!-- CARD 18: Waiver -->
+            <div class="terms-card">
+                <h2><i class="fas fa-handshake"></i> 18. Waiver</h2>
+                <p>Our failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision. Any waiver must be in writing and signed by an authorized representative of Plot Drop.</p>
+            </div>
+
+            <!-- CARD 19: Force Majeure -->
+            <div class="terms-card">
+                <h2><i class="fas fa-cloud-sun"></i> 19. Force Majeure</h2>
+                <p>We are not liable for any delay or failure to perform our obligations caused by events beyond our reasonable control, including but not limited to: acts of God, natural disasters, war, terrorism, labor strikes, government actions, or supplier failures. In such cases, we will make reasonable efforts to resume work as soon as possible.</p>
+            </div>
+
+            <!-- CARD 20: Contact Information -->
+            <div class="terms-card">
+                <h2><i class="fas fa-address-card"></i> 20. Contact Information</h2>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <p><i class="fas fa-envelope" style="color: #2b5f55; width: 28px;"></i> <strong>Email:</strong> legal@plotdrop.com</p>
+                <p><i class="fas fa-phone-alt" style="color: #2b5f55; width: 28px;"></i> <strong>Phone:</strong> (555) 289-7700</p>
+                <p><i class="fas fa-map-pin" style="color: #2b5f55; width: 28px;"></i> <strong>Mail:</strong> 1428 Evergreen Lane, Suite B, Portland, OR 97214</p>
+                <p>We are committed to maintaining transparent and fair Terms of Service. Your trust is important to us, and we strive to resolve any issues promptly and professionally.</p>
+            </div>
+
+            <!-- Additional detailed content to reach 2500+ words -->
+            <div class="terms-card">
+                <h2><i class="fas fa-plus-circle"></i> 21. Additional Terms</h2>
+                <h3>21.1. Equipment and Tools</h3>
+                <p>We use professional-grade equipment for all our projects. You agree to allow us access to your property for equipment delivery and setup. We are not responsible for damage to driveways, walkways, or landscaping caused by our vehicles or equipment, provided we use reasonable care. Any special requirements for heavy equipment (e.g., crane access, weight limits) must be disclosed during the consultation.</p>
+                <h3>21.2. Permits and Approvals</h3>
+                <p>Some projects may require permits from local authorities or approval from homeowners' associations. Unless we agree in writing to handle this process, it is your responsibility to obtain all necessary permits and approvals. We are not liable for fines, penalties, or project delays resulting from unpermitted work.</p>
+                <h3>21.3. Site Conditions</h3>
+                <p>We will conduct a site assessment before providing a quote. However, we cannot be held responsible for unknown or hidden site conditions (e.g., underground utilities, contaminated soil, unstable ground) that are not apparent during our inspection. If such conditions are discovered, we will inform you and provide a revised quote for any additional work required.</p>
+                <h3>21.4. Asbestos and Hazardous Materials</h3>
+                <p>If we encounter asbestos, lead, or other hazardous materials during our work, we will stop work immediately and notify you. Remediation of hazardous materials is your responsibility, and we will resume work only after a qualified professional has cleared the site.</p>
+                <h3>21.5. Photography and Marketing</h3>
+                <p>We may take photographs or videos of completed projects for marketing purposes, including our website, social media, and portfolio. Unless you specifically request that we do not, you grant us a non-exclusive, royalty-free license to use these images. We will not include identifiable personal information (e.g., names, addresses) without your consent.</p>
+                <h3>21.6. Subcontractors</h3>
+                <p>We may engage qualified subcontractors to assist with certain aspects of your project (e.g., electrical work, heavy excavation). All subcontractors are covered by our liability insurance and are bound by the same quality and safety standards as our direct employees.</p>
+                <h3>21.7. Environmental Stewardship</h3>
+                <p>Plot Drop is committed to sustainable practices. We recycle materials where possible, use eco-friendly products, and minimize waste. We comply with all environmental regulations regarding disposal of construction materials.</p>
+                <h3>21.8. Dispute Resolution Details</h3>
+                <p>For any arbitration proceedings, the following rules apply: The arbitration shall be conducted by a single arbitrator with expertise in construction and landscaping disputes. The arbitration award shall be final and binding, and judgment may be entered in any court having jurisdiction. The arbitration shall be held in Portland, Oregon, and conducted in English.</p>
+                <h3>21.9. Assignment</h3>
+                <p>You may not assign or transfer these Terms or any of your rights or obligations under them without our prior written consent. We may assign these Terms to a successor entity in the event of a merger, acquisition, or sale of assets.</p>
+                <h3>21.10. Survival</h3>
+                <p>Provisions that by their nature should survive termination of these Terms (e.g., payment obligations, warranty disclaimers, liability limits, dispute resolution) shall survive termination.</p>
+                <h3>21.11. Electronic Signatures</h3>
+                <p>You agree that electronic signatures, including digital agreements and email confirmations, have the same legal effect as physical signatures.</p>
+                <p>These Terms of Service are designed to protect both you and Plot Drop, ensuring a clear, fair, and professional working relationship. We value your business and are committed to delivering exceptional results while maintaining the highest standards of integrity and transparency.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer with address & phone -->
+    <footer>
+        <div class="wrapper footer-grid">
+            <div class="footer-address">
+                <i class="fas fa-map-pin"></i> 1428 Evergreen Lane, Suite B<br />
+                <span style="margin-left: 28px;">Portland, OR 97214</span><br />
+                <i class="fas fa-envelope" style="margin-top: 6px;"></i> hello@plotdrop.com
+            </div>
+            <div class="footer-phone">
+                <i class="fas fa-phone-alt"></i> (555) 289-7700
+            </div>
+            <div class="footer-nav">
+                <a href="home.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="cookies.html">Cookies</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="wrapper copyright">
+            &copy; 2026 Plot Drop Lawn Edging · terms of service
+        </div>
+    </footer>
+</body>
+</html>
